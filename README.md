@@ -1,6 +1,6 @@
 # Покупка ПВЗ 
 
-<img style="display:block; width:45%; height:30%;" src="https://github.com/Hiagar11/Bootstrap/blob/First_project/BootstrapPVZ.gif"> 
+<img width="45%" height="30%"  src="https://github.com/Hiagar11/Bootstrap/blob/First_project/BootstrapPVZ.gif"> 
 
 ____
   
