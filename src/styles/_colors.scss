@@ -1,4 +1,27 @@
 :root {
 //  --variable: значение | --header-fon: red
-  --headerTextColor: red;
+  --headerTextColor: rgba(255, 255, 255, 1);
+  --headerTextBtn:rgba(92, 82, 237, 1);
+  --headerFonBtn: rgba(255, 255, 255, 1);
+
+  --mainTitleDesc:rgba(108, 84, 241, 1);
+  --mainTitleTask:rgba(43, 82, 219, 1);
+  --mainTitleAdvan:rgba(255, 255, 255, 1);
+  --mainTitleAdvanH3:rgba(255, 255, 255, 1);
+  --mainTitleBuy:rgba(108, 84, 241, 1);
+
+  --mainTextAdvan: rgba(255, 255, 255, 1);
+  --mainTextOver: rgba(75, 75, 75, 1);
+
+  --mainTextWarranty: rgba(50, 50, 50, 1);
+
+  --footerFon: rgba(246, 249, 255, 1);
+  --footerTitle: rgba(108, 84, 241, 1);
+
+  --footerLinks: rgba(39, 39, 39, 1);
+
+
+
+
+
 }
