@@ -28,7 +28,7 @@
     @content
   }
 }
-@mixin setFont ($family: forText, $lh: false, $fs: false) {
+@mixin setFont ($family: forText,$fs: false,$lh: false) {
   font-family: $family;
   @if $lh {line-height: $lh};
   @if $fs { font-size: $fs};

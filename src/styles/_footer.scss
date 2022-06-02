@@ -1,5 +1,20 @@
 @use 'mixins';
 
 .footer {
-
+  background-color: var(--footerFon);
+  &__title {
+    color: var(--footerTitle);
+    @include mixins.setFont(UBU700, 36px, 42px);
+  }
+  &__item {
+    @include mixins.setFont(UBU400, 22px, 40px);
+    a {
+      color: var(--footerLinks);
+      text-decoration: none;
+    }
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
 }

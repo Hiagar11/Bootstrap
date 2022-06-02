@@ -2,4 +2,200 @@
 
 .header {
   color: var(--headerTextColor);
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  .fon {
+    width: 100vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    @include mixins.XS {
+      background-image:url("../images/headerFonMobile.svg"), linear-gradient(115.98deg, #5B52ED 0.66%, #953FE2 33.64%, #B15CFD 71.86%, #5B52ED 97.21%);
+      background-position: center 20%, 0 0;
+      background-size: 100% 80%, 100%;
+      height: 180vh;
+    }
+    @include mixins.MD {
+      background-image:url("../images/headerFonDefault.png"), linear-gradient(115.98deg, #5B52ED 0.66%, #953FE2 33.64%, #B15CFD 71.86%, #5B52ED 97.21%);
+      background-position: 100% 200px, 0 0;
+      background-size: 815px 797px, 100%;
+      height: 90vh;
+    }
+    @include mixins.LG {
+      background-image:url("../images/headerFonLaptop.png"), linear-gradient(115.98deg, #5B52ED 0.66%, #953FE2 33.64%, #B15CFD 71.86%, #5B52ED 97.21%);
+      background-position: 100% 120px, 0 0;
+      background-size: 900px 797px, 100%;
+    }
+    @include mixins.XL {
+      background-image:url("../images/headerFonDesktop.png"), linear-gradient(115.98deg, #5B52ED 0.66%, #953FE2 33.64%, #B15CFD 71.86%, #5B52ED 97.21%);
+      background-position: 100% 10px, 0 0;
+      background-size: 900px 797px, 100%;
+      clip-path: polygon(0 0 ,100% 0, 100% 80%, 8% 80%, 0 100%);
+      min-height: 100vh;
+    }
+  }
+  &__nav {
+
+  }
+
+  &__section {
+
+  }
+
+  &__title {
+    @include mixins.XS {
+      @include mixins.setFont(UBU700,36px, 42px)
+    }
+    @include mixins.MD {
+      @include mixins.setFont(UBU700,41px, 47px)
+    }
+    @include mixins.LG {
+      margin-top: 90px !important;
+      @include mixins.setFont(UBU700,46px, 52px)
+    }
+    @include mixins.XL {
+      margin-top: 60px !important;
+    }
+  }
+  &__subtitle {
+    @include mixins.XS {
+      @include mixins.setFont(UBU400,20px, 25px);
+      margin-bottom: 344px;
+    }
+    @include mixins.MD {
+      @include mixins.setFont(UBU400,20px, 22px);
+      margin-bottom: 0 !important;
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU400,22px, 26px)
+    }
+  }
+  &__benefits {
+
+  }
+  &__btn {
+    display: block;
+    color: var(--headerTextBtn);
+    background-color: var(--headerFonBtn);
+    text-decoration: none;
+    clip-path: polygon(7% 0, 100% 0, 100% 75%, 93% 100%, 0 100%, 0 25%);
+    border-radius: 5px;
+    text-align: center;
+    @include mixins.XS {
+      @include mixins.setFont(UBU700,17px, 19px)
+    }
+    @include mixins.MD {
+      margin-bottom: 206px !important;
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU700,19px, 22px);
+    }
+    @include mixins.XL {
+      margin-top: 40px !important;
+      margin-bottom: 70px !important;
+      clip-path: polygon(7% 0, 100% 0, 100% 60%, 93% 100%, 0 100%, 0 40%);
+      border-radius: 5px;
+      background-image: linear-gradient(0deg, #B15CFD 0%, #7355F2 100%);
+      color: var(--headerTextColor);
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      @include mixins.LG {
+        @include mixins.setFont(UBU700,19px, 22px)
+      }
+    }
+  }
+  .btnwrapper {
+    @include mixins.XL {
+      filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+    }
+
+  }
+}
+.benefits {
+  @include mixins.XS {
+    @include mixins.setFont(UBU500,12px, 14px)
+  }
+  @include mixins.XL {
+    margin-top: 56px !important;
+    margin-bottom: 56px !important;
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 12px;
+      background-repeat: no-repeat;
+      @include mixins.XS {
+        width: 22px;
+        height: 22px;
+        background-size: 22px 22px;
+      }
+      @include mixins.LG {
+        width: 24px;
+        height: 24px;
+        background-size: 24px 24px;
+      }
+    }
+    &:nth-child(1)::before {
+      background-image: url("../images/akar-icons_people-multiple.svg");
+    }
+    &:nth-child(2)::before {
+      background-image: url("../images/carbon_manage-protection.svg");
+    }
+    &:nth-child(3)::before {
+      background-image: url("../images/akar-icons_money.svg");
+    }
+    &:nth-child(4)::before {
+      background-image: url("../images/icon-park-outline_sales-report.svg");
+    }
+  }
+}
+.nav {
+  &__img {
+
+  }
+  &__btn {
+    @include mixins.MD {
+      display: none;
+    }
+    position: relative;
+    width: 25px;
+    height: 25px;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      top: 0;
+      left: 0;
+      background-color: var(--headerTextColor);
+      box-shadow: 0 8px var(--headerTextColor),
+      0 16px var(--headerTextColor);
+    }
+  }
+  &__list {
+    display: none;
+    @include mixins.MD {
+      display: flex;
+    }
+  }
+  &__item {
+    color: var(--headerTextColor);
+    text-decoration: none;
+    display: block;
+    @include mixins.MD {
+      @include mixins.setFont(UBU500,14px, 16px);
+    }
+  }
+  &__item--active {
+    @include mixins.setFont(UBU700,14px, 16px);
+  }
 }

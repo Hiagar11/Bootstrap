@@ -1,5 +1,297 @@
 @use 'mixins';
 
 .main {
+  color: var(--mainTextOver);
+  &__description {
 
+  }
+
+  &__tasks {
+
+  }
+
+  &__advantages {
+
+  }
+
+  &__buy {
+
+  }
 }
+
+.description {
+  &__title {
+    color : var(--mainTitleDesc);
+
+    @include mixins.setFont(UBU700, 36px, 42px);
+  }
+
+  &__text {
+    @include mixins.XS {
+      @include mixins.setFont(UBU400, 20px , 36px);
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU400, 22px , 40px);
+    }
+  }
+
+  &__img {
+    width: 70%;
+    @include mixins.MD {
+      width: 50%;
+    }
+    @include mixins.LG {
+      width: 35%;
+    }
+  }
+}
+
+.tasks {
+  &__title {
+    color:var(--mainTitleTask);
+
+    @include mixins.setFont(UBU500, 26px, 36px);
+  }
+
+  &__articles {
+    @include mixins.setFont(UBU400, 22px, 30px);
+  }
+}
+
+.articles {
+  &__item {
+    position: relative;
+    padding-left: 70px;
+    @include mixins.XS {
+      margin-left: 20px;
+    }
+    @include mixins.SM {
+      margin-left: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 54px;
+      height: 54px;
+      background-size: 54px 54px;
+      background-repeat: no-repeat;
+    }
+    &:nth-child(1)::before {
+      background-image: url("../images/repair.svg");
+    }
+    &:nth-child(2)::before {
+      background-image: url("../images/mdi_financetask.svg");
+    }
+    &:nth-child(3)::before {
+      background-image: url("../images/healthicons_i-documents-accepted-outlinetask.svg");
+    }
+    &:nth-child(4)::before {
+      background-image: url("../images/akar-icons_people-grouptask.svg");
+    }
+    &:nth-child(5)::before {
+      background-image: url("../images/rush.svg");
+    }
+  }
+}
+
+.advantages {
+  color: var(--mainTextAdvan);
+  background-image: radial-gradient(132.47% 101.93% at 100.21% 70.31%, #B75CFE 0%, #4950EA 100%);
+  @include mixins.XL {
+    clip-path: polygon(0 0, 8% 10%, 100% 10%, 100% 100%, 0 100%);
+    padding-top: 100px;
+  }
+  &__title {
+    @include mixins.setFont(UBU700, 36px, 41px);
+  }
+
+  &__text {
+    @include mixins.XS {
+      @include mixins.setFont(UBU500, 20px, 35px);
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU500, 22px, 40px);
+    }
+  }
+
+  &__img {
+    width: 70%;
+    @include mixins.MD {
+      width: 40%;
+      height: 40%;
+    }
+  }
+
+  &__title--h3 {
+    @include mixins.setFont(UBU500, 26px, 36px);
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__item {
+    position: relative;
+    @include mixins.setFont(UBU500, 20px, 24px);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-image: url("../images/check-mark.svg");
+    }
+  }
+  &__subtext {
+    @include mixins.setFont(UBU500, 16px, 18px);
+  }
+}
+
+.buy {
+  &__title {
+    color: var(--mainTitleBuy);
+    @include mixins.setFont(UBU700, 36px, 41px);
+  }
+
+  &__text {
+
+    @include mixins.XS {
+      @include mixins.setFont(UBU400, 20px, 35px);
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU400, 22px, 40px);
+    }
+  }
+
+  &__warranty {
+
+  }
+}
+.warranty {
+  position: relative;
+  border-radius: 12px;
+  filter: drop-shadow( 5px 5px 10px rgba(0, 0, 0, 0.1));
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    height: 70%;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 48%;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      bottom: 20px;
+      left: 32%;
+      z-index: 3;
+      box-shadow:0 20px 5px 5px rgba(70,70,70,0.3);
+    }
+    img {
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    color: var(--mainTextWarranty);
+    @include mixins.XS {
+      @include mixins.setFont(UBU400, 13px, 18px);
+    }
+    @include mixins.MD {
+      @include mixins.setFont(UBU400, 12px, 16px);
+    }
+    @include mixins.LG {
+      @include mixins.setFont(UBU400, 14px, 18px);
+    }
+    @include mixins.XL {
+      @include mixins.setFont(UBU400, 18px, 23px);
+    }
+  }
+  &__fon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: linear-gradient(83.37deg, #FFFDF5 2.57%, #F8F8F8 94.79%);
+    clip-path: polygon(7% 0, 100% 0, 100% 75%, 93% 100%, 0 100%, 0 25%);
+  }
+}
+
+.callback {
+  background: linear-gradient(267.99deg, #5A52ED -1.18%, #9865FE 24.38%, #8D6AFF 58.05%, #B05CFD 99.81%);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 80px auto;
+  @media (min-width: 576px) {
+
+      max-width: 100%;
+
+  }
+  @media (min-width: 768px) {
+    flex-direction: row;
+      max-width: 720px;
+
+  }
+  @media (min-width: 992px) {
+
+      max-width: 960px;
+
+  }
+  @media (min-width: 1200px) {
+
+      max-width: 1140px;
+
+  }
+  @media (min-width: 1400px) {
+
+      max-width: 1320px;
+
+  }
+  @include mixins.setFont(UBU400, 18px, 32px);
+  @include mixins.MD {
+    clip-path: polygon(0 0, 95% 0, 100% 15%, 100% 100%, 5% 100%, 0 85%);
+  }
+  &__name {
+    margin: 40px auto 0 auto;
+    width: 90%;
+    padding: 3%;
+    @media (min-width: 768px) {
+      width: 30%;
+      margin: 5% 10px;
+    }
+  }
+  &__tel {
+    margin: 20px auto 0 auto;
+    width: 90%;
+    padding: 3%;
+    @media (min-width: 768px) {
+      width: 30%;
+      margin: 5% 10px;
+    }
+  }
+  &__send {
+    margin: 40px auto 40px auto;
+    width: 60%;
+    padding: 3%;
+    border: none;
+    background-color: var(--mainTextAdvan);
+    @media (min-width: 768px) {
+      width: 30%;
+      margin: 5% 10px;
+    }
+    @include mixins.setFont(UBU700, 18px, 21px);
+    @include mixins.MD {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+

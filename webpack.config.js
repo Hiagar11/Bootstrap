@@ -6,12 +6,12 @@ const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const {extendDefaultPlugins} = require("svgo");
 const Spritesmith = require('spritesmith');
 
-const sprites = [];
-Spritesmith.run({src: sprites}, function handleResult (err, result) {
-    result.image; // Buffer representation of image
-    result.coordinates; // Object mapping filename to {x, y, width, height} of image
-    result.properties; // Object with metadata about spritesheet {width, height}
-});
+// const sprites = ['logoDefault.svg', 'logoMobile.svg'];
+// Spritesmith.run({src: sprites}, function handleResult (err, result) {
+//     result.image; // Buffer representation of image
+//     result.coordinates; // Object mapping filename to {x, y, width, height} of image
+//     result.properties; // Object with metadata about spritesheet {width, height}
+// });
 
 const PATHS = {
     src: path.join(__dirname, 'src')
